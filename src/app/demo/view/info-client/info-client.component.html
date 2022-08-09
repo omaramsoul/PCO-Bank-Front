@@ -1,0 +1,38 @@
+<p-table [value]="[[]]" [scrollable]="true">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Type</th>
+            <th>Information</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" >
+        <tr>
+            <td>N° Client</td>
+            <td>{{clientInfo?.clienacli}}</td>
+        </tr>
+        <tr>
+            <td>Raison Sociale ou Nom</td>
+            <td>{{clientInfo?.clienara1}}</td>
+        </tr>
+        <tr>
+            <td>Sigle usuel</td>
+            <td>{{clientInfo?.clienasig}}</td>
+        </tr>
+        <tr>
+            <td>Catégorie</td>
+            <td>{{clientInfo?.clienacat}}</td>
+        </tr>
+        <tr>
+            <td>Secteur d'activité</td>
+            <td>{{clientInfo?.clienareg}}</td>
+        </tr>
+        <tr>
+            <td>Client Douteux</td>
+            <td>{{clientInfo?.clienadou}}</td>
+        </tr>
+        <tr>
+            <td>Date création client</td>
+            <td>{{dateCreation}}</td>
+        </tr>
+    </ng-template>
+</p-table>

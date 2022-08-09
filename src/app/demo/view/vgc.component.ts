@@ -26,6 +26,26 @@ export class EmptyDemoComponent implements OnInit{
   cardItem: any;
   client: any;
   detectChanges: any;
+  cardToContent = new Map<String, String>([
+    ["Alertes Commerciales",`<app-alertes-commerciales></app-alertes-commerciales>`],
+    ["Crédits",`<app-credits></app-credits>`],
+    ["Impayes DAI/PTF",`<app-impayes-dai-ptf></app-impayes-dai-ptf>`],
+    ["Mouvements en attente",`<app-mouvement-en-attente></app-mouvement-en-attente>`],
+    ["Autorisation",`<app-autorisation></app-autorisation>`],
+    ["Mouvements client",`<app-mouvement-client></app-mouvement-client>`],
+    ["Prélèvement",`<app-prelevement></app-prelevement>`],
+    ["Remises daily",`<app-remises-daily></app-remises-daily>`],
+    ["Remises protefeuille",`<app-remises-portefeuille></app-remises-portefeuille>`],
+    ["Synthèse client",`<app-synthese-client></app-synthese-client>`],
+    ["Reporting client",`<app-reporting-client></app-reporting-client>`],
+    ["Comptes",`<app-comptes></app-comptes>`],
+    ["Contact client",`<app-contact-client></app-contact-client>`],
+    ["Informations",`<app-info-client></app-info-client>`],
+    ["Géolocalisation",`<app-geolocalisation></app-geolocalisation>`],
+    ["Pièces dossier",`<app-pieces-dossier></app-pieces-dossier>`],
+    ["Signature client",`<app-signature-client></app-signature-client>`]
+
+]);
   
 
     constructor(private breadcrumbService: BreadcrumbService,
@@ -87,7 +107,7 @@ export class EmptyDemoComponent implements OnInit{
    }
 
    addItem(cardTitle: string) {
-     this.dashboard.push({cols: 2, rows: 1, y: 0, x: 0, cardTitle: cardTitle, color: "#0d89ec"});
+     this.dashboard.push({cols: 2, rows: 1, y: 0, x: 0, cardTitle: cardTitle, color: "#0d89ec", content: this.cardToContent.get(cardTitle)});
    }
 
 
