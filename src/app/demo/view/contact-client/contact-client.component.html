@@ -1,0 +1,19 @@
+
+<input [(ngModel)]="filterString" (ngModelChange)="onFilterChange()" style="z-index: 1000; margin-top: 10px;margin-left: 10px"/>
+<table>
+    <tr>
+        <th>Type</th>
+        <th>Information</th>
+    </tr>
+
+    
+        <tr *ngFor="let contactData of clientContact">
+            
+              <td>{{contactData[0]}}</td>
+              <td>{{contactData[1]}}</td>
+            
+        </tr>
+
+    
+
+<table>

@@ -149,6 +149,7 @@ import {MatMenuModule} from '@angular/material/menu';
 
 import { DynamicHooksModule, HookParserEntry } from 'ngx-dynamic-hooks';
 import { InfoClientComponent } from './demo/view/info-client/info-client.component';
+import { ContactClientComponent } from './demo/view/contact-client/contact-client.component';
 
 
 
@@ -161,6 +162,7 @@ FullCalendarModule.registerPlugins([
 
 const componentParsers: Array<HookParserEntry> = [
     {component: InfoClientComponent},
+    {component: ContactClientComponent}
     // ...
 ];
 
@@ -303,6 +305,7 @@ const componentParsers: Array<HookParserEntry> = [
         BlockViewer,
         AddCardComponent,
         InfoClientComponent,
+        ContactClientComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
@@ -310,6 +313,6 @@ const componentParsers: Array<HookParserEntry> = [
         PhotoService, ProductService, MenuService, BreadcrumbService, ClientService
     ],
     bootstrap: [AppComponent],
-    entryComponents: [InfoClientComponent, ],
+    entryComponents: [InfoClientComponent, ContactClientComponent ],
 })
 export class AppModule { }
