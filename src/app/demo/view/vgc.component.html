@@ -13,11 +13,11 @@
             <th class="tableHeader">Siren</th>  
             </tr>
             <tbody >
-              <tr>
-                <td class="tableData">{{client?.clienacli}}</td>
-                <td class="tableData">{{client?.clienara1}}</td>
-                <td class="tableData">{{client?.clienares}}</td>
-                <td class="tableData">{{client?.clienacli}}</td>
+              <tr *ngFor="cl in client">
+                <td class="tableData">{{cl[0]}}</td>
+                <td class="tableData">{{cl[1]}}</td>
+                <td class="tableData">{{cl[2]}}</td>
+                <td class="tableData">{{cl[3]}}</td>
                 </tr>
             </tbody>
         </table>

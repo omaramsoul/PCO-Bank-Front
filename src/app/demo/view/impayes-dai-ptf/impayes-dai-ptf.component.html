@@ -1,6 +1,6 @@
-<p-table #contactsTable [value]="clientContact" responsiveLayout="scroll"
+<p-table #contactsTable [value]="clientImpayes" responsiveLayout="scroll"
     
-       [filterDelay]="0" [globalFilterFields]="['Type','Informations']">
+       [filterDelay]="0" [globalFilterFields]="['Type','Informations']" style="border: 1px solid !important">
 
        <ng-template pTemplate="caption">
         <div class="flex">
@@ -18,25 +18,19 @@
 
 <ng-template pTemplate="header">
         <tr>
-            <th type="text" field="Type" display="menu">
-                
-                    Type
-                    
-               
+            <th type="text" field="Type" display="menu" *ngFor="let header of headers">
+                {{header}}      
             </th>
-            <th  type="text" field="Informations" display="menu">
-                
-                    Informations
-                  
-                
-            </th>
+           
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-contact>
-        <tr>
-            <td>{{contact[0]}}</td>
-            <td>{{contact[1]}}</td>
+        <tr *ngFor="let impayes of clientImpayes">
+            <th type="text" field="Type" display="menu" *ngFor="let impaye of impayes" >
+                {{impaye}}      
+            </th>
+           
+        </tr>
     </ng-template>
 
 </p-table>
-

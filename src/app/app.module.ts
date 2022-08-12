@@ -150,6 +150,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import { DynamicHooksModule, HookParserEntry } from 'ngx-dynamic-hooks';
 import { InfoClientComponent } from './demo/view/info-client/info-client.component';
 import { ContactClientComponent } from './demo/view/contact-client/contact-client.component';
+import { ImpayesDaiPtfComponent } from './demo/view/impayes-dai-ptf/impayes-dai-ptf.component';
+import { AutorisationsComponent } from './demo/view/autorisations/autorisations.component';
+import { ComptesComponent } from './demo/view/comptes/comptes.component';
 
 
 
@@ -162,7 +165,10 @@ FullCalendarModule.registerPlugins([
 
 const componentParsers: Array<HookParserEntry> = [
     {component: InfoClientComponent},
-    {component: ContactClientComponent}
+    {component: ContactClientComponent},
+    {component: ImpayesDaiPtfComponent},
+    {component: AutorisationsComponent},
+    {component: ComptesComponent}
     // ...
 ];
 
@@ -306,6 +312,9 @@ const componentParsers: Array<HookParserEntry> = [
         AddCardComponent,
         InfoClientComponent,
         ContactClientComponent,
+        ImpayesDaiPtfComponent,
+        AutorisationsComponent,
+        ComptesComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
@@ -313,6 +322,6 @@ const componentParsers: Array<HookParserEntry> = [
         PhotoService, ProductService, MenuService, BreadcrumbService, ClientService
     ],
     bootstrap: [AppComponent],
-    entryComponents: [InfoClientComponent, ContactClientComponent ],
+    entryComponents: [InfoClientComponent, ContactClientComponent,ImpayesDaiPtfComponent, AutorisationsComponent, ComptesComponent],
 })
 export class AppModule { }

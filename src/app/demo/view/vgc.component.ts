@@ -15,7 +15,7 @@ import { Menu } from 'primeng/menu';
 // })
 export class EmptyDemoComponent implements OnInit{
 
-  selectedItem :any= {}; // holder for tab object
+  selectedItem : any= {}; // holder for tab object
   display = false; // dialog visible state
   activeIndex1: number = 0;
   activeIndex2: number = 0;
@@ -31,7 +31,7 @@ export class EmptyDemoComponent implements OnInit{
     ["Crédits",`<app-credits></app-credits>`],
     ["Impayes DAI/PTF",`<app-impayes-dai-ptf></app-impayes-dai-ptf>`],
     ["Mouvements en attente",`<app-mouvement-en-attente></app-mouvement-en-attente>`],
-    ["Autorisation",`<app-autorisation></app-autorisation>`],
+    ["Autorisations",`<app-autorisations></app-autorisations>`],
     ["Mouvements client",`<app-mouvement-client></app-mouvement-client>`],
     ["Prélèvement",`<app-prelevement></app-prelevement>`],
     ["Remises daily",`<app-remises-daily></app-remises-daily>`],
@@ -53,7 +53,7 @@ export class EmptyDemoComponent implements OnInit{
                 private primengConfig: PrimeNGConfig,
                 private clientService: ClientService) {
         this.breadcrumbService.setItems([
-            {label: 'Empty Page'}
+            {label: 'Vision Global Client'}
         ]);
         this.detectChanges = clientService.searchChange.subscribe((value) => {
           this.client = clientService.getClient();
@@ -81,12 +81,12 @@ export class EmptyDemoComponent implements OnInit{
       draggable: {
         enabled: true
       },
-      gridType: GridType.Fit,
+      gridType: GridType.ScrollVertical,
       resizable: {
         enabled: true
       },
-      minItemCols: 2,
-      maxCols: 6,
+      // minItemCols: 2,
+      // maxCols: 6,
       
       
       pushItems: true,

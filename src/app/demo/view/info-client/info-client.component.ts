@@ -15,7 +15,7 @@ export class InfoClientComponent implements OnInit {
   clientDateCreaMois:string;
   clientDateCreaJour:string;
   dateCreation: string;
-
+  types : String[] = ["N° Client","Raison Sociale ou Nom","Sigle usuel","Catégorie","Secteur d'activité","Client Douteux","Date création client"]
   constructor(private clientService: ClientService) { }
 
   ngOnInit() {

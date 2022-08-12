@@ -5,12 +5,12 @@ import { ClientService } from './client.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ClientContactService {
+export class ComptesService {
 
   constructor(private http: HttpClient,
-              private clientService: ClientService) { }
+    private clientService: ClientService) { }
 
-  getClientContact(){
-    return  this.http.get("http://localhost:8080/api/client/"+ this.clientService.clientId +"/contacts");
+  getComptes(){
+    return this.http.get(("http://localhost:8080/api/client/"+ this.clientService.clientId +"/comptes"))
   }
 }

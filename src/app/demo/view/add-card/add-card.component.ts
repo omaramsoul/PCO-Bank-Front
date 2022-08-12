@@ -92,8 +92,8 @@ export class AddCardComponent implements OnInit {
                 ]
              },
              {
-                label:'Autorisation', command: () =>  {
-                  this.cardAdder.addItem('Autorisation');
+                label:'Autorisations', command: () =>  {
+                  this.cardAdder.addItem('Autorisations');
                 }
                
              },

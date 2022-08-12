@@ -30,7 +30,7 @@ export class ClientService {
     }
 
     getClientById() {
-        return this.http.get("http://localhost:8080/api/clients/" + this.clientId);
+        return this.http.get("http://localhost:8080/api/client/" + this.clientId);
     }
 
 }
