@@ -1,42 +1,34 @@
-<p-table #contactsTable [value]="clientContact" responsiveLayout="scroll"
-    
-       [filterDelay]="0" [globalFilterFields]="['Type','Informations']">
+<p-table #contactstionTable [value]="[[]]" responsiveLayout="scroll">
 
-       <ng-template pTemplate="caption">
-        <div class="flex">
-            <button type="button" pButton pRipple icon="pi pi-download" (click)="contactsTable.exportCSV()" class="mr-2" pTooltip="CSV" tooltipPosition="bottom" style="color: red"></button>
+    <ng-template pTemplate="caption">
+     <div class="flex">
+         <button type="button" pButton pRipple icon="pi pi-download" (click)="contactsTable.exportCSV()" class="mr-2" pTooltip="CSV" tooltipPosition="bottom" style="color: red"></button>
 
-            <span class="p-input-icon-left ml-auto">
-                <i class="pi pi-search"></i>
-                <input pInputText type="text" (input)="contactsTable.filterGlobal($event.target.value, 'contains')" placeholder="entrer un mot-clé" />
-            </span>
-        </div>
-        </ng-template>
+         <span class="p-input-icon-left ml-auto">
+             <i class="pi pi-search"></i>
+             <input pInputText type="text" (input)="contactsTable.filterGlobal($event.target.value, 'contains')" placeholder="entrer un mot-clé" />
+         </span>
+     </div>
+     </ng-template>
 
 
 
 
-<ng-template pTemplate="header">
-        <tr>
-            <th type="text" field="Type" display="menu">
-                
-                    Type
-                    
-               
-            </th>
-            <th  type="text" field="Informations" display="menu">
-                
-                    Informations
-                  
-                
-            </th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-contact>
-        <tr>
-            <td>{{contact[0]}}</td>
-            <td>{{contact[1]}}</td>
-    </ng-template>
+ <ng-template pTemplate="header">
+     <tr>
+         <th type="text" field="Type" display="menu" *ngFor="let header of headers">
+             {{header}}      
+         </th>
+        
+     </tr>
+ </ng-template>
+
+ <ng-template pTemplate="body">
+     <tr  *ngFor="let contacts of clientContact">
+         <td *ngFor='let contact of contacts'>
+             {{contact}}
+         </td>     
+     </tr>
+ </ng-template>
 
 </p-table>
-

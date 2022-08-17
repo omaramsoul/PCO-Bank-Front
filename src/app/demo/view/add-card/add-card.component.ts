@@ -18,7 +18,7 @@ export class AddCardComponent implements OnInit {
   ngOnInit() {
       this.items = [
           {
-            label: 'Ajouter vue',
+            label: 'vues',
             icon: 'pi pi-clone',
             items: [
               {

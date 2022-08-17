@@ -8,12 +8,17 @@ import { ImpayesDaiPtfService } from '../../service/impayes-dai-ptf.service';
 })
 export class ImpayesDaiPtfComponent implements OnInit {
   clientImpayes: any;
-  headers = ["N° imp.", "Opé.", "Nat.", "Date créa.", "Dev.", "Mon.", "Motif"]
+  headers : String[];
 
   constructor(private service: ImpayesDaiPtfService ) { }
 
   ngOnInit(): void {
-    this.clientImpayes = this.service.getImpayes().subscribe(data =>{ this.clientImpayes = data});
+    this.clientImpayes = this.service.getImpayes().subscribe(data =>{ 
+      this.clientImpayes = data;
+      this.headers = data[0];
+      this.clientImpayes.shift();
+      console.log(this.clientImpayes)
+    });
   }
 
 }

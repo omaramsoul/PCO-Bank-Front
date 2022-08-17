@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { AppMainComponent } from './app.main.component';
 import { BreadcrumbService } from './app.breadcrumb.service';
 import { Subscription } from 'rxjs';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, TreeNode } from 'primeng/api';
 
 @Component({
     selector: 'app-topbar',
@@ -19,20 +19,21 @@ export class AppTopBarComponent implements OnDestroy{
     clients:any;
     items: MenuItem[];
     detectChanges: any;
+    dropDownData: MenuItem[];
+    clientInfo: any;
+    
+
 
     constructor(public breadcrumbService: BreadcrumbService, 
                 public app: AppComponent, 
                 public appMain: AppMainComponent,
-                private clientService: ClientService,
+                public service: ClientService,
                ) {
         this.subscription = breadcrumbService.itemsHandler.subscribe(response => {
             this.items = response;
-        });
-        // this.detectChanges = clientService.searchChange.subscribe((value) => {
-        //     // this.client = clientService.getClient();
-        //     console.log(this.clients)
-        //     console.log('jjjj');
-        //   })
+        
+ });
+        
     }
 
     ngOnDestroy() {
@@ -42,9 +43,11 @@ export class AppTopBarComponent implements OnDestroy{
     }
 
     getClientIdValue() {
-        this.clientService.setClientIdValue(this.clientId);
-        this.clientService.getClientById().subscribe(data => {
-            this.clientService.setClient(data);
+        this.service.setClientIdValue(this.clientId);
+        this.service.getClientById().subscribe(data => {
+        this.service.setClient(data);
+        console.log(this.service.client)
         });
+
     }
 }

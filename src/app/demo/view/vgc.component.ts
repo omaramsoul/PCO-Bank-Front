@@ -81,7 +81,7 @@ export class EmptyDemoComponent implements OnInit{
       draggable: {
         enabled: true
       },
-      gridType: GridType.ScrollVertical,
+      gridType: GridType.Fit,
       resizable: {
         enabled: true
       },

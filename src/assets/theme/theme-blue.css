@@ -5054,12 +5054,12 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
 }
 
 .p-tieredmenu {
-  padding: 0.25rem 0;
+  /* padding: 0.25rem 0; */
   background: #ffffff;
   color: #495057;
-  border: 1px solid #dee2e6;
+  /* border: 1px solid #dee2e6;
   border-radius: 4px;
-  width: 12.5rem;
+  width: 12.5rem; */
 }
 .p-tieredmenu .p-menuitem-link {
   padding: 0.75rem 1rem;

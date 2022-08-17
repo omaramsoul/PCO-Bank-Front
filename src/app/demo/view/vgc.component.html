@@ -4,7 +4,7 @@
       <!-- Tableau qui affiche le resultat du client cherché -->
       <div class="clientContainer">
         <div class="cilentInfoContainer">
-        <table class="cltInfoTable" >
+        <!-- <table class="cltInfoTable" >
 
             <tr>
             <th class="tableHeader">N° Client</th>
@@ -13,14 +13,14 @@
             <th class="tableHeader">Siren</th>  
             </tr>
             <tbody >
-              <tr *ngFor="cl in client">
-                <td class="tableData">{{cl[0]}}</td>
-                <td class="tableData">{{cl[1]}}</td>
-                <td class="tableData">{{cl[2]}}</td>
-                <td class="tableData">{{cl[3]}}</td>
+              <tr >
+                <td class="tableData">{{client?.[0][0]}}</td>
+                <td class="tableData">{{client?.[0][1]}}</td>
+                <td class="tableData">{{client?.[0][2]}}</td>
+                <td class="tableData">{{client?.[0][3]}}</td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
         </div>
     </div>
 
@@ -32,18 +32,28 @@
       
 
         
-        <button pButton pRipple label="" class="addNewTabView" icon="pi pi-plus" (click)="addNewTabView()"></button>
+        
+        <div class="topright">
+
+          
+          <button pButton pRipple label="" class="addNewTabView" icon="pi pi-plus" (click)="addNewTabView()"></button>
+          <app-add-card style="float: right"></app-add-card>
+        </div>
+
+        
+
         <p-tabView id="closableTabView" [scrollable]="true">
             <p-tabPanel  [closable]="true" *ngFor="let tab of tabs">
 
               <ng-template pTemplate="header">
                 <label>{{tab.header}} </label>
                 <button pButton pRipple type="button" icon="pi pi-pencil pencil-edit" class="p-button p-button-text" (click)="showDialog(tab)"></button>
+
               </ng-template>
+              
 
               <div class="gridsterContainer">
 
-                <app-add-card></app-add-card>
 
                 <gridster [options]="options" style="position: static;">
 

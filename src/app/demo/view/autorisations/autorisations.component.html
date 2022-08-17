@@ -1,12 +1,12 @@
-<p-table #autorisationTable [value]="clientAutorisations" responsiveLayout="scroll">
+<p-table #autorisationsTable [value]="[[]]" responsiveLayout="scroll">
 
        <ng-template pTemplate="caption">
         <div class="flex">
-            <button type="button" pButton pRipple icon="pi pi-download" (click)="contactsTable.exportCSV()" class="mr-2" pTooltip="CSV" tooltipPosition="bottom" style="color: red"></button>
+            <button type="button" pButton pRipple icon="pi pi-download" (click)="autorisationsTable.exportCSV()" class="mr-2" pTooltip="CSV" tooltipPosition="bottom" style="color: red"></button>
 
             <span class="p-input-icon-left ml-auto">
                 <i class="pi pi-search"></i>
-                <input pInputText type="text" (input)="contactsTable.filterGlobal($event.target.value, 'contains')" placeholder="entrer un mot-clé" />
+                <input pInputText type="text" (input)="autorisationsTable.filterGlobal($event.target.value, 'contains')" placeholder="entrer un mot-clé" />
             </span>
         </div>
         </ng-template>
@@ -14,7 +14,7 @@
 
 
 
-<ng-template pTemplate="header">
+    <ng-template pTemplate="header">
         <tr>
             <th type="text" field="Type" display="menu" *ngFor="let header of headers">
                 {{header}}      
@@ -22,18 +22,12 @@
            
         </tr>
     </ng-template>
+
     <ng-template pTemplate="body">
         <tr  *ngFor="let autorisations of clientAutorisations">
-            <td>{{autorisations[0]}}</td>
-            <td>{{autorisations[1]}}</td>   
-            <td>{{autorisations[2]}}</td>   
-            <td>{{autorisations[3]}}</td>   
-            <td>{{autorisations[4]}}</td>   
-            <td>{{autorisations[5]}}</td>   
-            <td>{{autorisations[6]}}</td>   
-            <td>{{autorisations[7]}}</td>   
-            
-           
+            <td *ngFor='let autorisation of autorisations'>
+                {{autorisation}}
+            </td>     
         </tr>
     </ng-template>
 

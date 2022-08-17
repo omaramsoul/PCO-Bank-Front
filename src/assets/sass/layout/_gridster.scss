@@ -17,7 +17,6 @@ gridster {
 }
 
 .addNewTabView {
-    float: right;
     background-color: #0d89ec;
     margin-left: 1rem;
     height: 2rem;
@@ -41,6 +40,11 @@ gridster-item {
     background-color: white;
     border-radius: 10px;
     border: 1px solid black ;
+}
+
+.topright {
+float : right;
+
 }
 
 .card-title {

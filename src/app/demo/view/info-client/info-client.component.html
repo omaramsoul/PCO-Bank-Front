@@ -1,39 +1,37 @@
-<p-table [value]="[[]]" [scrollable]="true">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>Type</th>
-            <th>Information</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" >
-        <tr>
-            <td>N° Client</td>
-            <td>{{clientInfo[0][0]}}</td>
-        </tr>
-        <tr>
-            <td>Raison Sociale ou Nom</td>
-            <td>{{clientInfo[0][1]}}</td>
-        </tr>
-        <tr>
-            <td>Sigle usuel</td>
-            <td>{{clientInfo[0][2]}}</td>
-        </tr>
-        <tr>
-            <td>Catégorie</td>
-            <td>{{clientInfo[0][3]}}</td>
-        </tr>
-        <tr>
-            <td>Secteur d'activité</td>
-            <td>{{clientInfo[0][4]}}</td>
-        </tr>
-        <tr>
-            <td>Client Douteux</td>
-            <td>{{clientInfo[0][5]}}</td>
-        </tr>
-        <tr>
-            <td>Date création client</td>
-            <td>{{clientInfo[0][6]}}</td>
-        </tr>
-    </ng-template>
+<p-table #informationsTable [value]="[[]]" responsiveLayout="scroll">
+
+    <ng-template pTemplate="caption">
+     <div class="flex">
+         <button type="button" pButton pRipple icon="pi pi-download" (click)="informationsTable.exportCSV()" class="mr-2" pTooltip="CSV" tooltipPosition="bottom" style="color: red"></button>
+
+         <span class="p-input-icon-left ml-auto">
+             <i class="pi pi-search"></i>
+             <input pInputText type="text" (input)="informationsTable.filterGlobal($event.target.value, 'contains')" placeholder="entrer un mot-clé" />
+         </span>
+     </div>
+     </ng-template>
+
+
+
+
+ <ng-template pTemplate="header">
+     <tr>
+         <th type="text" field="Type" display="menu" *ngFor="let header of headers">
+             {{header}}      
+         </th>
+        
+     </tr>
+ </ng-template>
+
+ <ng-template pTemplate="body">
+     <tr  *ngFor="let Type of Types; let Info of Infos">
+         <td >
+             {{Type}}
+             {{Info}}
+         </td> 
+        
+             
+     </tr>
+ </ng-template>
+
 </p-table>
-{{dateCreation}}

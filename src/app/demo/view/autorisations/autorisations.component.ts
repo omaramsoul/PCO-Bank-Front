@@ -9,9 +9,16 @@ import { AutorisationsService } from '../../service/autorisations.service';
 })
 export class AutorisationsComponent implements OnInit {
   clientAutorisations : any;
-  headers = ["Gpe", "Type", "Code", "Déb. Auto.", "	Fin Auto.", "Montant", "Dev.","Blo."]
+  headers : String[];
   constructor(private service: AutorisationsService) {
-    this.clientAutorisations = service.getAutorisations().subscribe(data => {this.clientAutorisations = data});
+    this.clientAutorisations = service.getAutorisations().subscribe(data => {
+      this.clientAutorisations = data;
+      this.headers = data[0];
+      this.clientAutorisations.shift();
+    
+    }
+      );
+    
    }
 
   ngOnInit(): void {
