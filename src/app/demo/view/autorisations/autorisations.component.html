@@ -25,7 +25,7 @@
 
     <ng-template pTemplate="body">
         <tr  *ngFor="let autorisations of clientAutorisations">
-            <td *ngFor='let autorisation of autorisations'>
+            <td *ngFor='let autorisation of autorisations; '   [ngStyle]="{'color':colorMap.get(autorisation), 'font-weight': 700 }">
                 {{autorisation}}
             </td>     
         </tr>

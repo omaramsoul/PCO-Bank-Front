@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ImpayesDaiPtfService } from '../../service/impayes-dai-ptf.service';
+import { Formatter } from '../Formatter';
 
 @Component({
   selector: 'app-impayes-dai-ptf',
@@ -15,9 +16,10 @@ export class ImpayesDaiPtfComponent implements OnInit {
   ngOnInit(): void {
     this.clientImpayes = this.service.getImpayes().subscribe(data =>{ 
       this.clientImpayes = data;
+      let colorMap = Formatter.format(data);
+      console.log(colorMap);
       this.headers = data[0];
       this.clientImpayes.shift();
-      console.log(this.clientImpayes)
     });
   }
 

@@ -46,7 +46,6 @@ export class AppTopBarComponent implements OnDestroy{
         this.service.setClientIdValue(this.clientId);
         this.service.getClientById().subscribe(data => {
         this.service.setClient(data);
-        console.log(this.service.client)
         });
 
     }
