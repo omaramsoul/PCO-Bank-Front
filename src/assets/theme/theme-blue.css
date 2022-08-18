@@ -1706,9 +1706,7 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   border-radius: 4px;
 }
-.p-button:enabled:hover {
-  
-}
+ 
 .cardsettings .p-tieredmenu {
   color: black !important;
   background-color: none;
@@ -1716,9 +1714,7 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
 .p-button .kebab-icon:enabled:hover {
   background-color: none;
 }
-.p-button:enabled:active {
-  
-}
+
 .p-button.p-button-outlined {
   background-color: transparent;
   color: #2196F3;
@@ -2659,10 +2655,6 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
   padding: 1rem;
 }
 
-.fc {
-  /* FullCalendar 4 */
-  /* FullCalendar 5 */
-}
 .fc.fc-unthemed .fc-view-container th {
   background: #f8f9fa;
   border: 1px solid #dee2e6;
@@ -4798,9 +4790,7 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
   outline-offset: 0;
   box-shadow: 0 0 0 0.2rem #a6d5fa;
 }
-.p-panelmenu .p-panelmenu-header:not(.p-highlight):not(.p-disabled) > a:hover {
-  
-}
+
 .p-panelmenu .p-panelmenu-header.p-highlight {
   margin-bottom: 0;
   
@@ -4810,9 +4800,7 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.p-panelmenu .p-panelmenu-header.p-highlight:not(.p-disabled) > a:hover {
-  
-}
+ 
 .p-panelmenu .p-panelmenu-content {
   padding: 0.25rem 0;
   border: 1px solid #dee2e6;

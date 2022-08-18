@@ -1,2 +1,17 @@
+:host ::ng-deep .mat-icon {
+    font-size: 15px;
+    height: auto;
+    float: left;
+}
 
+.VuesButton {
+    padding: 10px 30px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
 
+:host ::ng-deep .mat-menu-item {
+    line-height: normal;
+    height: 30px !important;
+}

@@ -7,7 +7,6 @@ import { Injectable, OnInit } from '@angular/core';
 })
 export class ClientService {
 
-    baseURL : string = "http://localhost:5000/clientId";
     clientId: string;
     client: any;
     searchChange: Subject<boolean> = new Subject<boolean>();

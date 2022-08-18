@@ -153,6 +153,7 @@ import { ContactClientComponent } from './demo/view/contact-client/contact-clien
 import { ImpayesDaiPtfComponent } from './demo/view/impayes-dai-ptf/impayes-dai-ptf.component';
 import { AutorisationsComponent } from './demo/view/autorisations/autorisations.component';
 import { ComptesComponent } from './demo/view/comptes/comptes.component';
+import { GridsterComponent } from './demo/view/gridster/gridster.component';
 
 
 
@@ -315,6 +316,7 @@ const componentParsers: Array<HookParserEntry> = [
         ImpayesDaiPtfComponent,
         AutorisationsComponent,
         ComptesComponent,
+        GridsterComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

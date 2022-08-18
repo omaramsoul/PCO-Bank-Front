@@ -1,0 +1,59 @@
+<app-add-card></app-add-card>
+
+<gridster [options]="options" style="position: static;">
+
+    <gridster-item [item]="item" *ngFor="let item of dashboard" style="z-index: 1!important;">
+
+      <div class="card-title" [ngStyle]="{'background-color': item.color}">
+        <div class="title">
+          {{item.cardTitle}}
+        </div>
+        <div class="card-settings">
+          <button mat-icon-button [matMenuTriggerFor]="menu" class="card-settings-button">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>refresh</mat-icon>
+              <span>Rafraichir</span>
+            </button>
+            <button mat-menu-item  [matMenuTriggerFor]="color" aria-label="Example icon-button with a menu">
+              <mat-icon>invert_colors</mat-icon>
+              <span class="menuItemText">Changer de couleur</span>
+            </button>
+
+            <mat-menu #color="matMenu" id="colorsMenu" style="min-height: 0px;">
+              <button mat-color-item class="colorBox box1 box" (click)="changeCardColor(item, '#e14a0c')">
+              </button >
+              <button mat-color-item class="colorBox box2 box" (click)="changeCardColor(item, '#7c0cc0')">
+              </button>
+              <button mat-color-item class="colorBox box3 box" (click)="changeCardColor(item, '#c1bf04')">
+              </button>
+              <button mat-color-item class="colorBox box4 box" (click)="changeCardColor(item, '#148ca4')">
+              </button >
+              <button mat-color-item class="colorBox box5 box" (click)="changeCardColor(item, '#4cc0a8')">
+              </button >
+              <button mat-color-item class="colorBox box6 box" (click)="changeCardColor(item, '#4c68d4')">
+              </button >
+              <button mat-color-item class="colorBox box7 box" (click)="changeCardColor(item, '#1468a8')">
+              </button >
+              <button mat-color-item class="colorBox box8 box" (click)="changeCardColor(item, '#50687c')">
+              </button >
+            </mat-menu>
+
+            <button mat-menu-item (click)="removeItem(item)">
+              <mat-icon>delete_outline</mat-icon>
+              <span>Supprimer</span>
+            </button>
+
+          </mat-menu>
+        </div>
+      </div>
+
+      <div class="contentBody">
+        <ngx-dynamic-hooks [content]="item.content"></ngx-dynamic-hooks>
+      </div>               
+      
+    </gridster-item>
+
+</gridster>
