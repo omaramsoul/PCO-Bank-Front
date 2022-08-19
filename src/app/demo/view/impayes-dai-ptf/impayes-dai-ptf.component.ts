@@ -10,14 +10,13 @@ import { Formatter } from '../Formatter';
 export class ImpayesDaiPtfComponent implements OnInit {
   clientImpayes: any;
   headers : String[];
-
+  colorMap : Map<any, String>;
   constructor(private service: ImpayesDaiPtfService ) { }
 
   ngOnInit(): void {
     this.clientImpayes = this.service.getImpayes().subscribe(data =>{ 
       this.clientImpayes = data;
-      let colorMap = Formatter.format(data);
-      console.log(colorMap);
+      this.colorMap = Formatter.format(data);
       this.headers = data[0];
       this.clientImpayes.shift();
     });

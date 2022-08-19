@@ -16,7 +16,6 @@ export class AutorisationsComponent implements OnInit {
     this.clientAutorisations = service.getAutorisations().subscribe(data => {
       this.clientAutorisations = data;
       this.colorMap = Formatter.format(data)
-      
       this.headers = data[0];
       this.clientAutorisations.shift();
     

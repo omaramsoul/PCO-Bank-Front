@@ -24,8 +24,8 @@
  </ng-template>
 
  <ng-template pTemplate="body" >
-     <tr  *ngFor="let impayes of clientImpayes" >
-         <td *ngFor='let impaye of impayes'>
+     <tr  *ngFor="let impayes of clientImpayes">
+         <td *ngFor='let impaye of impayes' [ngStyle]="{'color':colorMap.get(impaye), 'font-weight': 700 }">
              {{impaye}}
          </td>     
      </tr>
