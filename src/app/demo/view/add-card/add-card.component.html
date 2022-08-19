@@ -1,1 +1,45 @@
-<p-tieredMenu [model]="items"></p-tieredMenu>
+<!-- <p-tieredMenu [model]="items"></p-tieredMenu> -->
+
+
+<button mat-button [matMenuTriggerFor]="vues" class="VuesButton"><mat-icon class="filterIcon">filter_none</mat-icon>Vues</button>
+
+<mat-menu #vues="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="Risques">Risques</button>
+  <button mat-menu-item [matMenuTriggerFor]="InfoClient">Info client</button>
+  <button mat-menu-item (click)="addNewCard('Autorisations')">Autorisations</button>
+  <button mat-menu-item [matMenuTriggerFor]="Mouvements">Mouvements</button>
+  <button mat-menu-item [matMenuTriggerFor]="Remises">Remises</button>
+  <button mat-menu-item [matMenuTriggerFor]="Reporting">Reporting</button>
+  <button mat-menu-item [matMenuTriggerFor]="Mouvements">Mouvements</button>
+</mat-menu>
+
+<mat-menu #Risques="matMenu">
+  <button mat-menu-item (click)="addNewCard('Alertes Commerciales')">Alertes Commerciales</button>
+  <button mat-menu-item (click)="addNewCard('Crédits')">Crédits</button>
+  <button mat-menu-item (click)="addNewCard('Impayes DAI/PTF')">Impayes DAI/PTF</button>
+  <button mat-menu-item (click)="addNewCard('Mouvements en attente')">Mouvements en attente</button>
+</mat-menu>
+
+<mat-menu #InfoClient="matMenu">
+  <button mat-menu-item (click)="addNewCard('Comptes')">Comptes</button>
+  <button mat-menu-item (click)="addNewCard('Contact client')">Contact client</button>
+  <button mat-menu-item (click)="addNewCard('Informations')">Informations</button>
+  <button mat-menu-item (click)="addNewCard('Géolocalisation')">Géolocalisation</button>
+  <button mat-menu-item (click)="addNewCard('Pièces dossier')">Pièces dossier</button>
+  <button mat-menu-item (click)="addNewCard('Signature client')">Signature client</button>
+</mat-menu>
+
+<mat-menu #Mouvements="matMenu">
+  <button mat-menu-item (click)="addNewCard('Mouvements client')">Mouvements client</button>
+  <button mat-menu-item (click)="addNewCard('Prélèvement')">Prélèvement</button>
+</mat-menu>
+
+<mat-menu #Remises="matMenu">
+  <button mat-menu-item (click)="addNewCard('Remises daily')">Remises daily</button>
+  <button mat-menu-item (click)="addNewCard('Remises protefeuille')">Remises protefeuille</button>
+</mat-menu>
+
+<mat-menu #Reporting="matMenu">
+  <button mat-menu-item (click)="addNewCard('Synthèse client')">Synthèse client</button>
+  <button mat-menu-item (click)="addNewCard('Reporting client')">Reporting client</button>
+</mat-menu>

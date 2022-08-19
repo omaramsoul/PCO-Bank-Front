@@ -10,6 +10,7 @@
 gridster {
     background-color: white;
     margin-top: 10px;
+    position: relative !important;
 }
 
 :host::ng-deep gridster-preview {
@@ -170,4 +171,41 @@ app-add-card {
 
 :host::ng-deep gridster .fixed {
     position: static !important;
+}
+
+
+:host ::ng-deep .p-tieredmenu .p-menuitem.p-menuitem-active .p-menuitem-link:hover {
+    background: white !important;
+}
+
+:host ::ng-deep .p-tieredmenu .p-menuitem-link:not(.p-disabled):hover {
+    background: none;
+}
+
+:host ::ng-deep .p-tieredmenu .p-menuitem.p-menuitem-active > .p-menuitem-link {
+    background: #ffffff; 
+}
+
+:host ::ng-deep .p-tieredmenu .p-menuitem-link:focus {
+    outline-offset: none;
+}
+
+:host ::ng-deep .p-tieredmenu .p-menuitem-link {
+    padding: 0.5rem 1rem;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link, .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link .pi-pencil{
+    border-radius: 3px;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    border-radius: 3px;
+}
+
+:host ::ng-deep .p-button.p-button-text:enabled:hover {
+    color:none;
+}
+
+:host ::ng-deep .p-tieredmenu .p-menuitem-link {
+    width: 100px;
 }

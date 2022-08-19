@@ -2,6 +2,7 @@
 import { EventEmitter, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
+import { GridsterComponent } from '../gridster/gridster.component';
 import { EmptyDemoComponent } from '../vgc.component';
 
 @Component({
@@ -11,10 +12,11 @@ import { EmptyDemoComponent } from '../vgc.component';
 })
 export class AddCardComponent implements OnInit {
 
-  @Output() newTab = new EventEmitter<number>();
 
   items: MenuItem[];
-   constructor(private cardAdder: EmptyDemoComponent){}
+
+  constructor(private cardAdder: GridsterComponent){}
+  
   ngOnInit() {
       this.items = [
           {
@@ -26,7 +28,7 @@ export class AddCardComponent implements OnInit {
                 items:[
                    {
                       label:'Alertes Commerciales', command: () =>  {
-                        this.cardAdder.addItem('Alertes Commerciales');
+                        ;
                       }
                       
                    },
@@ -156,6 +158,10 @@ export class AddCardComponent implements OnInit {
             ]
           },
       ];
+  }
+
+  addNewCard(cardTitle: string) {
+    this.cardAdder.addItem(cardTitle);
   }
 
 }

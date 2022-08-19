@@ -142,7 +142,6 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
 import { GridsterModule } from 'angular-gridster2';
-import { AddCardComponent } from './demo/view/add-card/add-card.component';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
@@ -153,6 +152,8 @@ import { ContactClientComponent } from './demo/view/contact-client/contact-clien
 import { ImpayesDaiPtfComponent } from './demo/view/impayes-dai-ptf/impayes-dai-ptf.component';
 import { AutorisationsComponent } from './demo/view/autorisations/autorisations.component';
 import { ComptesComponent } from './demo/view/comptes/comptes.component';
+import { GridsterComponent } from './demo/view/gridster/gridster.component';
+import { AddCardComponent } from './demo/view/add-card/add-card.component';
 
 
 
@@ -309,12 +310,13 @@ const componentParsers: Array<HookParserEntry> = [
         AppAccessdeniedComponent,
         BlocksComponent,
         BlockViewer,
-        AddCardComponent,
         InfoClientComponent,
         ContactClientComponent,
         ImpayesDaiPtfComponent,
         AutorisationsComponent,
         ComptesComponent,
+        GridsterComponent,
+        AddCardComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
