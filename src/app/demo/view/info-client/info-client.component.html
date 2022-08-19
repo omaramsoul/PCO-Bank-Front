@@ -24,14 +24,35 @@
  </ng-template>
 
  <ng-template pTemplate="body">
-     <tr  *ngFor="let Type of Types; let Info of Infos">
-         <td >
-             {{Type}}
-             {{Info}}
-         </td> 
-        
-             
-     </tr>
+    <tr>
+        <td>{{clientInfo[0][0]}}</td>
+        <td>{{clientInfo[1][0]}}</td>
+    </tr>  
+    <tr>
+        <td>{{clientInfo[0][1]}}</td>
+        <td>{{clientInfo[1][1]}}</td>
+    </tr> 
+    <tr>
+        <td>{{clientInfo[0][2]}}</td>
+        <td>{{clientInfo[1][2]}}</td>
+    </tr> 
+    <tr>
+        <td>{{clientInfo[0][3]}}</td>
+        <td>{{clientInfo[1][3]}}</td>
+    </tr>
+    <tr>
+        <td>{{clientInfo[0][4]}}</td>
+        <td>{{clientInfo[1][4]}}</td>
+    </tr>
+    <tr>
+        <td>{{clientInfo[0][5]}}</td>
+        <td>{{clientInfo[1][5]}}</td>
+    </tr>
+    <tr>
+        <td>{{clientInfo[0][6]}}</td>
+        <td>{{clientInfo[1][6]}}</td>
+    </tr>
+
  </ng-template>
 
 </p-table>

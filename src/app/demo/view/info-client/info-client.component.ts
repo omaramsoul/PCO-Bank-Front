@@ -12,16 +12,11 @@ export class InfoClientComponent implements OnInit {
 
   clientInfo : any;
   headers = ["Type", "Informations"];
-  Types : any[];
-  Infos : any[];
   constructor(private service: InformationsService) { }
 
   ngOnInit() {
    this.clientInfo = this.service.getInformations().subscribe(data => {
-                              this.clientInfo = data;   
-                              this.Types = data[0];
-                              this.Infos = data[1];
-                          
+                              this.clientInfo = data;                                                
                             });
   }
 

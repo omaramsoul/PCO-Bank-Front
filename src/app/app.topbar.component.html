@@ -15,7 +15,7 @@
 
     <div id="topbar-icons" class="animated"
          [ngClass]="{'topbar-icons-visible flipInX':appMain.topMenuActive,'flipOutX':appMain.topMenuLeaving}">
-         <p-splitButton label="N° Client:"  icon="pi pi-user" [model]="dropDownData" styleClass="p-button-info mr-2 mb-2"></p-splitButton>
+         <p-splitButton label="Non du client: {{service.client?.[1][1]}}"  icon="pi pi-user" [model]="dropDownData" styleClass="p-button-info mr-2 mb-2"></p-splitButton>
                 <span class="topbar-search" (click)="appMain.onSearchClick()">
                 <input type="text" placeholder="Chercher client" class="search-bar-field" [(ngModel)]="clientId" (change)="getClientIdValue()"/>
                 <span class="topbar-search-icon pi pi-search"></span>

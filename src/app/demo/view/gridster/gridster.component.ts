@@ -48,6 +48,7 @@ export class GridsterComponent implements OnInit {
 
         this.options = {
           compactType: CompactType.None,
+          disablePushOnResize: false,
           draggable: {
             enabled: true
           },
