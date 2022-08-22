@@ -3,6 +3,8 @@
 
 <button mat-button [matMenuTriggerFor]="vues" class="VuesButton"><mat-icon class="filterIcon">filter_none</mat-icon>Vues</button>
 
+
+<!-- le groupes et carte a aucaun groupe -->
 <mat-menu #vues="matMenu">
   <button mat-menu-item [matMenuTriggerFor]="Risques">Risques</button>
   <button mat-menu-item [matMenuTriggerFor]="InfoClient">Info client</button>
@@ -10,16 +12,25 @@
   <button mat-menu-item [matMenuTriggerFor]="Mouvements">Mouvements</button>
   <button mat-menu-item [matMenuTriggerFor]="Remises">Remises</button>
   <button mat-menu-item [matMenuTriggerFor]="Reporting">Reporting</button>
-  <button mat-menu-item [matMenuTriggerFor]="Mouvements">Mouvements</button>
+  <!-- ajouter votre groupe ou carte qui n'appartient a aucun groupe içi -->
+
+
 </mat-menu>
 
+
+<!-- le groupes des risques -->
 <mat-menu #Risques="matMenu">
   <button mat-menu-item (click)="addNewCard('Alertes Commerciales')">Alertes Commerciales</button>
   <button mat-menu-item (click)="addNewCard('Crédits')">Crédits</button>
   <button mat-menu-item (click)="addNewCard('Impayes DAI/PTF')">Impayes DAI/PTF</button>
   <button mat-menu-item (click)="addNewCard('Mouvements en attente')">Mouvements en attente</button>
+ <!-- ajouter votre carte içi -->
+
 </mat-menu>
 
+
+
+<!-- le groupe des infos client -->
 <mat-menu #InfoClient="matMenu">
   <button mat-menu-item (click)="addNewCard('Comptes')">Comptes</button>
   <button mat-menu-item (click)="addNewCard('Contact client')">Contact client</button>
@@ -27,19 +38,35 @@
   <button mat-menu-item (click)="addNewCard('Géolocalisation')">Géolocalisation</button>
   <button mat-menu-item (click)="addNewCard('Pièces dossier')">Pièces dossier</button>
   <button mat-menu-item (click)="addNewCard('Signature client')">Signature client</button>
+  <!-- ajouter votre carte içi -->
+
 </mat-menu>
 
+
+<!-- le groupes des Mouvements -->
 <mat-menu #Mouvements="matMenu">
   <button mat-menu-item (click)="addNewCard('Mouvements client')">Mouvements client</button>
   <button mat-menu-item (click)="addNewCard('Prélèvement')">Prélèvement</button>
+  <!-- ajouter votre carte içi -->
+
 </mat-menu>
 
+
+<!-- le groupes des Remises -->
 <mat-menu #Remises="matMenu">
   <button mat-menu-item (click)="addNewCard('Remises daily')">Remises daily</button>
   <button mat-menu-item (click)="addNewCard('Remises protefeuille')">Remises protefeuille</button>
+  <!-- ajouter votre carte içi -->
+
 </mat-menu>
 
+
+<!-- le groupes des Reporting -->
 <mat-menu #Reporting="matMenu">
   <button mat-menu-item (click)="addNewCard('Synthèse client')">Synthèse client</button>
   <button mat-menu-item (click)="addNewCard('Reporting client')">Reporting client</button>
+  <!-- ajouter votre carte içi -->
+
 </mat-menu>
+
+<!--Ajouter vos groupe ici-->
