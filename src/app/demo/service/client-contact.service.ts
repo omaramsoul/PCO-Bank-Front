@@ -11,6 +11,6 @@ export class ClientContactService {
               private clientService: ClientService) { }
 
   getClientContact(){
-    return  this.http.get("http://localhost:8080/api/client/"+ this.clientService.clientId +"/contacts");
+    return  this.http.get("http://localhost:9090/api/client/"+ this.clientService.clientId +"/contacts");
   }
 }

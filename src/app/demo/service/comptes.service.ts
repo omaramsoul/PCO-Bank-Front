@@ -11,6 +11,6 @@ export class ComptesService {
     private clientService: ClientService) { }
 
   getComptes(){
-    return this.http.get(("http://localhost:8080/api/client/"+ this.clientService.clientId +"/comptes"))
+    return this.http.get(("http://localhost:9090/api/client/"+ this.clientService.clientId +"/comptes"))
   }
 }

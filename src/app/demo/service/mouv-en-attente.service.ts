@@ -11,6 +11,6 @@ export class MouvEnAttenteService {
               private clientService: ClientService ) { }
 
   getClientMEA(){
-    return this.http.get("http://localhost:8080/api/client/" +this.clientService.clientId+"/mea")
+    return this.http.get("http://localhost:9090/api/client/" +this.clientService.clientId+"/mea")
   }
 }
