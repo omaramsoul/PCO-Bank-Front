@@ -16,7 +16,8 @@ export class InfoClientComponent implements OnInit {
 
   ngOnInit() {
    this.clientInfo = this.service.getInformations().subscribe(data => {
-                              this.clientInfo = data;                                                
+                              this.clientInfo = data;   
+                              this.clientInfo[1][6] = this.clientInfo[1][6].toString().slice(2, 4) +"/" +this.clientInfo[1][6].toString().slice(4, 6) + "/" + this.clientInfo[1][6].toString().slice(6, 8) ;                                         
                             });
   }
 

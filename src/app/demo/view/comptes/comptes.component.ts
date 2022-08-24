@@ -21,23 +21,12 @@ export class ComptesComponent implements OnInit {
       this.comptes.shift()
     
     });
-    this.basicData = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-      datasets: [
-          {
-              label: 'First Dataset',
-              data: [65, 59, 80, 81, 56, 55, 40],
-              fill: false,
-              borderColor: '#42A5F5',
-              tension: .4
-          }
-      ]
-    };
+    
     this.lineStylesData = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
           {
-              label: 'First Dataset',
+              label: 'Soldes du client',
               data: [65, 59, 80, 81, 56, 55, 40],
               fill: false,
               tension: .4,

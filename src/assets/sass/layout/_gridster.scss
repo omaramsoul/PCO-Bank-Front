@@ -96,14 +96,15 @@ float : right;
 .cltInfoTable th {background-color: rgba(0,0,0,.125);}
 
 .tableHeader {
-    width: 15rem;
-    height: 1rem;
+    width: 20rem;
+    height: 0.7rem;
+    font-size: 0.7rem;
     padding-left: 10px;
 }
 
 .tableData {
     padding-left: 10px;
-    height: 2rem;
+    height: 1rem;
 }
 
 app-add-card {

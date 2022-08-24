@@ -7,7 +7,7 @@ import { Injectable, OnInit } from '@angular/core';
 })
 export class ClientService {
 
-    baseURL : string = "http://localhost:5000/clientId";
+    baseURL : string = "http://localhost:4200/clientId";
     clientId: string;
     client: any;
     searchChange: Subject<boolean> = new Subject<boolean>();
@@ -30,7 +30,7 @@ export class ClientService {
     }
 
     getClientById() {
-        return this.http.get("http://localhost:9090/api/client/search/" + this.clientId);
+        return this.http.get("http://localhost:8080/api/client/search/" + this.clientId);
     }
 
 }

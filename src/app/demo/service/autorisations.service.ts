@@ -12,7 +12,7 @@ export class AutorisationsService {
               private clientService: ClientService ) { }
 
   getAutorisations(): Observable<any>{
-    return  this.http.get("http://localhost:9090/api/client/"+ this.clientService.clientId +"/autorisations");
+    return  this.http.get("http://localhost:8080/api/client/"+ this.clientService.clientId +"/autorisations");
   }
 
 }

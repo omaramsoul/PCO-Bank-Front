@@ -1,4 +1,26 @@
 <div class="grid">
+        <!-- Tableau qui affiche le resultat du client cherché -->
+        <div class="clientContainer">
+          <div class="cilentInfoContainer">
+          <table class="cltInfoTable" >
+  
+              <tr>
+              <th class="tableHeader">N° Client</th>
+              <th class="tableHeader">Raison Sociale ou Nom</th>
+              <th class="tableHeader">Attaché commercial</th>
+              <th class="tableHeader">Siren</th>  
+              </tr>
+              <tbody >
+                <tr>
+                  <td class="tableData">{{client?.[1][0]}}</td>
+                  <td class="tableData">{{client?.[1][1]}}</td>
+                  <td class="tableData">{{client?.[1][2]}}</td>
+                  <td class="tableData">{{client?.[1][3]}}</td>
+                  </tr>
+              </tbody>
+          </table>
+          </div>
+      </div>
     <div class="col-12">
 
       <div class="card" >   

@@ -10,7 +10,7 @@ export class InformationsService {
   constructor(private http: HttpClient,
               private clientService: ClientService) { }
   getInformations(){
-    return this.http.get("http://localhost:9090/api/client/" +this.clientService.clientId+"/informations")
+    return this.http.get("http://localhost:8080/api/client/" +this.clientService.clientId+"/informations")
 
   }
 }
